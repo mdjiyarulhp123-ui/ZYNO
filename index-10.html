@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07110c">
+<meta name="description" content="ZYNO Smart Learning - Class 6 to 10 notes, quizzes and study assistant">
+<title>ZYNO — Smart Learning</title>
+<style>
+:root{--bg:#07110c;--panel:#0d1c13;--panel2:#10271a;--green:#39f58a;--green2:#16a34a;--text:#f2fff6;--muted:#a8c4b1;--line:#234832;--red:#ff7272}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top right,#123822 0,#07110c 40%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100vh}
+header{padding:20px 16px 14px;position:sticky;top:0;z-index:5;background:#07110cf2;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.brand{display:flex;align-items:center;gap:12px;max-width:900px;margin:auto}.logo{width:48px;height:48px;border-radius:15px;background:linear-gradient(135deg,var(--green),#159447);display:grid;place-items:center;color:#05200f;font-weight:1000;font-size:20px;box-shadow:0 0 24px #39f58a30}.brand h1{margin:0;font-size:25px;letter-spacing:2px}.brand p{margin:2px 0 0;color:var(--muted);font-size:12px}
+main{max-width:900px;margin:auto;padding:18px 14px 90px}.hero{background:linear-gradient(135deg,#12351f,#0b1b11);border:1px solid #28643e;border-radius:22px;padding:21px;margin-bottom:18px}.hero h2{font-size:25px;line-height:1.2;margin:0 0 8px}.hero p{color:#c8e8d2;margin:0 0 16px}.pill{display:inline-block;background:#153e26;color:#b8ffd0;border:1px solid #2b7045;padding:6px 10px;border-radius:999px;font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.tile,.panel{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:17px;padding:15px}.tile{cursor:pointer;min-height:112px;text-align:left;color:var(--text);font:inherit}.tile:active,button:active{transform:scale(.985)}.tile .ico{font-size:25px}.tile h3{margin:8px 0 4px;font-size:16px}.tile p{margin:0;color:var(--muted);font-size:12px}.section{display:none}.section.active{display:block}.section-title{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:8px 0 14px}.section-title h2{margin:0;font-size:22px}
+button,select,input,textarea{font:inherit}button{border:0;border-radius:11px;padding:11px 14px;background:var(--green);color:#05200f;font-weight:800;cursor:pointer}button.secondary{background:#173a25;color:#e5ffed;border:1px solid #2c5b3b}button:disabled{opacity:.5;cursor:not-allowed}
+select,input,textarea{width:100%;padding:12px;border-radius:11px;border:1px solid #2a5137;background:#08140d;color:var(--text);outline:none}textarea{resize:vertical;min-height:100px}label{display:block;color:var(--muted);font-size:13px;margin:10px 0 6px}.row{display:flex;gap:9px;align-items:center}.row>*{flex:1;min-width:0}.question{padding:14px;border:1px solid var(--line);border-radius:14px;margin:12px 0;background:#0a1910}.option{display:block;width:100%;text-align:left;margin-top:8px;background:#13291b;color:var(--text);border:1px solid #2b5137;font-weight:600}.option.correct{background:#123e24;border-color:var(--green)}.option.wrong{background:#3a1717;border-color:var(--red)}.muted{color:var(--muted);font-size:13px}.note{padding:12px;border:1px solid var(--line);border-radius:12px;margin-top:10px;background:#0a1910}.note h3{margin:0 0 6px}.note p{white-space:pre-wrap;margin:0 0 10px;color:#d7ebdd}.chatlog{height:300px;overflow:auto;border:1px solid var(--line);border-radius:13px;padding:10px;background:#08140d;margin-bottom:10px}.bubble{padding:10px 12px;border-radius:12px;margin:7px 0;white-space:pre-wrap;overflow-wrap:anywhere}.bubble.user{background:#16472a;margin-left:22px}.bubble.bot{background:#13251a;margin-right:22px}.notice{border:1px solid #6a5724;background:#292311;color:#ffe8a3;padding:11px;border-radius:12px;font-size:13px;margin:12px 0}.footer{text-align:center;color:var(--muted);font-size:12px;margin:25px 0 5px}
+nav{position:fixed;bottom:0;left:0;right:0;z-index:6;display:flex;justify-content:center;background:#07110cf5;border-top:1px solid var(--line);padding:8px 4px calc(8px + env(safe-area-inset-bottom));backdrop-filter:blur(12px)}nav button{background:transparent;color:var(--muted);padding:7px 10px;font-size:11px;flex:1;max-width:130px}nav button.active{color:var(--green);background:#12331f}
+@media(min-width:620px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero h2{font-size:32px}main{padding-top:24px}}@media(max-width:360px){.brand h1{font-size:21px}.grid{gap:8px}.tile{padding:12px}nav button{font-size:10px;padding:7px 5px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><div class="logo">Z</div><div><h1>ZYNO</h1><p>SMART LEARNING • BRIGHT FUTURE</p></div></div></header>
+<main>
+<section id="home" class="section active">
+  <div class="hero"><span class="pill">CLASS 6–10 • FREE LEARNING</span><h2>सीखो स्मार्ट तरीके से! 🚀</h2><p>नोट्स पढ़ो, MCQ हल करो और अपनी तैयारी बेहतर बनाओ।</p><button onclick="showSection('quiz')">क्विज़ शुरू करो →</button></div>
+  <div class="grid">
+    <button class="tile" onclick="showSection('classes')"><div class="ico">📚</div><h3>क्लास और नोट्स</h3><p>कक्षा 6 से 10 तक</p></button>
+    <button class="tile" onclick="showSection('quiz')"><div class="ico">🧠</div><h3>MCQ क्विज़</h3><p>अभ्यास और स्कोर</p></button>
+    <button class="tile" onclick="showSection('mynotes')"><div class="ico">📝</div><h3>मेरे नोट्स</h3><p>लिखो और सेव करो</p></button>
+    <button class="tile" onclick="showSection('ai')"><div class="ico">🤖</div><h3>AI Study</h3><p>स्टडी असिस्टेंट</p></button>
+    <button class="tile" onclick="showSection('results')"><div class="ico">🏆</div><h3>मेरे रिजल्ट</h3><p>पिछले स्कोर देखो</p></button>
+    <button class="tile" onclick="showSection('about')"><div class="ico">✨</div><h3>ZYNO के बारे में</h3><p>ऐप की जानकारी</p></button>
+  </div>
+</section>
+
+<section id="classes" class="section">
+ <div class="section-title"><h2>📚 क्लास और नोट्स</h2><button class="secondary" onclick="showSection('home')">होम</button></div>
+ <div class="panel"><label for="classPick">अपनी क्लास चुनो</label><select id="classPick"><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option></select>
+ <label for="subjectPick">विषय चुनो</label><select id="subjectPick"><option>विज्ञान</option><option>गणित</option><option>सामान्य ज्ञान</option><option>अंग्रेज़ी</option><option>हिंदी</option></select><button style="margin-top:12px" onclick="loadSampleNotes()">नमूना नोट्स दिखाओ</button></div>
+ <div id="sampleNotes" class="note"><h3>स्वागत है!</h3><p>क्लास और विषय चुनकर “नमूना नोट्स दिखाओ” दबाओ। यहाँ अभी डेमो नोट्स हैं; अपनी किताब के अनुसार पढ़ाई करना।</p></div>
+</section>
+
+<section id="quiz" class="section">
+ <div class="section-title"><h2>🧠 MCQ क्विज़</h2><span class="pill">डेमो टेस्ट</span></div>
+ <div class="panel"><p class="muted">5 सवालों के जवाब चुनो। अंत में तुम्हारा स्कोर दिखेगा।</p><label for="quizSubject">विषय</label><select id="quizSubject" onchange="startQuiz()"><option value="science">विज्ञान</option><option value="math">गणित</option><option value="gk">सामान्य ज्ञान</option></select><div id="quizArea"></div><div class="row"><button class="secondary" onclick="startQuiz()">फिर से शुरू</button><button onclick="submitQuiz()">रिजल्ट देखो</button></div><p id="quizResult" aria-live="polite"></p></div>
+</section>
+
+<section id="mynotes" class="section">
+ <div class="section-title"><h2>📝 मेरे नोट्स</h2></div>
+ <div class="panel"><label for="noteTitle">नोट का शीर्षक</label><input id="noteTitle" maxlength="80" placeholder="जैसे: प्रकाश के नियम"><label for="noteBody">अपने नोट्स लिखो</label><textarea id="noteBody" maxlength="10000" placeholder="यहाँ लिखो..."></textarea><button onclick="saveNote()">नोट सेव करो</button> <button class="secondary" onclick="clearNoteForm()">खाली करो</button><p class="muted">नोट्स इसी ब्राउज़र/मोबाइल में सेव होंगे। ब्राउज़र डेटा हटाने पर मिट सकते हैं।</p></div><div id="notesList"></div>
+</section>
+
+<section id="ai" class="section">
+ <div class="section-title"><h2>🤖 AI Study Assistant</h2></div>
+ <div class="notice"><b>डेमो मोड:</b> अभी असली AI सर्वर कनेक्ट नहीं है। यह सामान्य स्टडी टिप्स और कुछ ऑफलाइन सवालों में मदद करेगा। असली AI के लिए सुरक्षित सर्वर/API कनेक्शन बाद में जोड़ना होगा।</div>
+ <div id="chatlog" class="chatlog" aria-live="polite"><div class="bubble bot">नमस्ते! मैं ZYNO Study Assistant का डेमो हूँ। मुझसे गणित, विज्ञान या पढ़ाई की टिप्स पूछो।</div></div>
+ <label for="aiInput">अपना सवाल लिखो</label><textarea id="aiInput" rows="3" placeholder="जैसे: प्रकाश संश्लेषण क्या है?"></textarea><button onclick="sendAI()">सवाल भेजो</button> <button class="secondary" onclick="clearChat()">चैट साफ़ करो</button>
+</section>
+
+<section id="results" class="section">
+ <div class="section-title"><h2>🏆 मेरे रिजल्ट</h2></div><div class="panel"><div id="resultsList"><p class="muted">अभी कोई टेस्ट नहीं दिया गया। क्विज़ पूरा करने के बाद स्कोर यहाँ दिखेगा।</p></div><button class="secondary" onclick="clearResults()">रिजल्ट हटाओ</button></div>
+</section>
+
+<section id="about" class="section">
+ <div class="section-title"><h2>✨ ZYNO के बारे में</h2></div><div class="panel"><h3>ZYNO — Smart Learning</h3><p>क्लास 6–10 के विद्यार्थियों के लिए पढ़ाई, नोट्स, क्विज़ और सीखने के टूल्स का एक शुरुआती डेमो।</p><p class="muted">यह मुफ्त शुरुआती वर्ज़न है। नोट्स और स्कोर इसी डिवाइस के ब्राउज़र में सेव होते हैं। नमूना प्रश्न सीमित हैं और आधिकारिक पाठ्यपुस्तक का विकल्प नहीं हैं।</p><p class="muted">© ZYNO • Learn • Practice • Grow</p></div>
+</section>
+<div class="footer">बनाया गया सीखने और आगे बढ़ने के लिए 💚</div>
+</main>
+<nav>
+ <button class="active" data-tab="home" onclick="showSection('home')">🏠<br>होम</button>
+ <button data-tab="classes" onclick="showSection('classes')">📚<br>क्लास</button>
+ <button data-tab="quiz" onclick="showSection('quiz')">🧠<br>क्विज़</button>
+ <button data-tab="ai" onclick="showSection('ai')">🤖<br>AI Study</button>
+ <button data-tab="mynotes" onclick="showSection('mynotes')">📝<br>नोट्स</button>
+</nav>
+<script>
+const $=id=>document.getElementById(id);
+function showSection(id){document.querySelectorAll('.section').forEach(s=>s.classList.toggle('active',s.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'});if(id==='mynotes')renderNotes();if(id==='results')renderResults();}
+const sample={
+ science:{title:'विज्ञान: प्रकाश संश्लेषण',body:'पौधे सूर्य के प्रकाश, पानी और कार्बन डाइऑक्साइड की मदद से अपना भोजन बनाते हैं। इस प्रक्रिया को प्रकाश संश्लेषण कहते हैं। क्लोरोफिल पत्तियों को हरा रंग देता है और प्रकाश ऊर्जा को पकड़ने में मदद करता है।'},
+ math:{title:'गणित: प्रतिशत',body:'प्रतिशत का अर्थ है प्रति सौ। प्रतिशत = (भाग ÷ कुल) × 100। उदाहरण: 50 में से 40 अंक = (40 ÷ 50) × 100 = 80%।'},
+ gk:{title:'सामान्य ज्ञान: भारत',body:'भारत की राजधानी नई दिल्ली है। भारत का राष्ट्रीय पशु बाघ और राष्ट्रीय पक्षी मोर है। भारत का संविधान 26 जनवरी 1950 को लागू हुआ।'}
+};
+function loadSampleNotes(){const c=$('classPick').value,s=$('subjectPick').value;let key=s==='गणित'?'math':s==='सामान्य ज्ञान'?'gk':'science';let item=sample[key];$('sampleNotes').innerHTML='<h3>'+c+' • '+item.title+'</h3><p>'+item.body+'</p><p class="muted">यह छोटा डेमो नोट है।</p>';}
+const questions={
+ science:[
+ {q:'पौधे अपना भोजन किस प्रक्रिया से बनाते हैं?',o:['श्वसन','प्रकाश संश्लेषण','वाष्पीकरण','पाचन'],a:1},
+ {q:'पानी का रासायनिक सूत्र क्या है?',o:['CO₂','O₂','H₂O','NaCl'],a:2},
+ {q:'पृथ्वी को ऊर्जा का मुख्य स्रोत क्या देता है?',o:['चंद्रमा','सूर्य','मंगल','तारे'],a:1},
+ {q:'मानव शरीर में रक्त पंप कौन करता है?',o:['फेफड़े','मस्तिष्क','हृदय','गुर्दे'],a:2},
+ {q:'पौधों की पत्तियाँ सामान्यतः किस रंग की होती हैं?',o:['नीली','हरी','काली','बैंगनी'],a:1}],
+ math:[
+ {q:'12 × 8 कितना होता है?',o:['86','96','108','88'],a:1},
+ {q:'त्रिभुज के तीनों कोणों का योग कितना होता है?',o:['90°','180°','270°','360°'],a:1},
+ {q:'100 का 25% कितना है?',o:['15','20','25','30'],a:2},
+ {q:'सबसे छोटी अभाज्य संख्या कौन-सी है?',o:['0','1','2','3'],a:2},
+ {q:'7² का मान क्या है?',o:['14','42','49','56'],a:2}],
+ gk:[
+ {q:'भारत की राजधानी क्या है?',o:['मुंबई','नई दिल्ली','पटना','कोलकाता'],a:1},
+ {q:'भारत का राष्ट्रीय पक्षी कौन है?',o:['तोता','मोर','कबूतर','हंस'],a:1},
+ {q:'एक सप्ताह में कितने दिन होते हैं?',o:['5','6','7','8'],a:2},
+ {q:'सूर्य किस दिशा से उगता है?',o:['पश्चिम','उत्तर','दक्षिण','पूर्व'],a:3},
+ {q:'भारत का स्वतंत्रता दिवस कब मनाया जाता है?',o:['26 जनवरी','15 अगस्त','2 अक्टूबर','14 नवंबर'],a:1}]
+};
+let answers={},quizSubmitted=false;
+function startQuiz(){answers={};quizSubmitted=false;$('quizResult').textContent='';const key=$('quizSubject').value;$('quizArea').innerHTML=questions[key].map((q,i)=>'<div class="question"><b>'+(i+1)+'. '+q.q+'</b>'+q.o.map((o,j)=>'<button class="option" id="q'+i+'o'+j+'" onclick="chooseAnswer('+i+','+j+')">'+String.fromCharCode(65+j)+'. '+o+'</button>').join('')+'</div>').join('');}
+function chooseAnswer(i,j){if(quizSubmitted)return;answers[i]=j;const q=questions[$('quizSubject').value][i];q.o.forEach((_,k)=>{const b=$('q'+i+'o'+k);b.style.outline=k===j?'2px solid #39f58a':'none';});}
+function submitQuiz(){if(quizSubmitted){$('quizResult').textContent='यह टेस्ट पहले ही सबमिट हो चुका है।';return;}const key=$('quizSubject').value,qs=questions[key];let score=0;qs.forEach((q,i)=>{if(answers[i]===q.a)score++;q.o.forEach((_,j)=>{const b=$('q'+i+'o'+j);if(b){b.disabled=true;if(j===q.a)b.classList.add('correct');else if(answers[i]===j)b.classList.add('wrong');}})});quizSubmitted=true;const record={subject:$('quizSubject').selectedOptions[0].text,score,total:qs.length,date:new Date().toLocaleString('hi-IN')};let arr=JSON.parse(localStorage.getItem('zynoResults')||'[]');arr.unshift(record);localStorage.setItem('zynoResults',JSON.stringify(arr.slice(0,20)));$('quizResult').textContent='तुम्हारा स्कोर: '+score+'/'+qs.length+' ('+Math.round(score/qs.length*100)+'%). '+(score>=4?'बहुत बढ़िया! 🎉':'अच्छा प्रयास! दोबारा अभ्यास करो।');}
+function getNotes(){try{return JSON.parse(localStorage.getItem('zynoNotes')||'[]')}catch(e){return []}}
+function saveNote(){const title=$('noteTitle').value.trim(),body=$('noteBody').value.trim();if(!title||!body){alert('कृपया शीर्षक और नोट्स दोनों लिखो।');return;}let notes=getNotes();notes.unshift({id:Date.now(),title,body,date:new Date().toLocaleDateString('hi-IN')});localStorage.setItem('zynoNotes',JSON.stringify(notes));$('noteTitle').value='';$('noteBody').value='';renderNotes();alert('तुम्हारे नोट्स सेव हो गए!');}
+function clearNoteForm(){$('noteTitle').value='';$('noteBody').value='';}
+function renderNotes(){const list=getNotes();$('notesList').innerHTML=list.length?list.map(n=>'<div class="note"><h3>'+escapeHTML(n.title)+'</h3><p>'+escapeHTML(n.body)+'</p><small class="muted">'+n.date+'</small><br><button class="secondary" style="margin-top:9px" onclick="deleteNote('+n.id+')">डिलीट</button></div>').join(''):'<p class="muted">अभी कोई नोट सेव नहीं है।</p>';}
+function deleteNote(id){localStorage.setItem('zynoNotes',JSON.stringify(getNotes().filter(n=>n.id!==id)));renderNotes();}
+function renderResults(){let a=JSON.parse(localStorage.getItem('zynoResults')||'[]');$('resultsList').innerHTML=a.length?a.map(r=>'<div class="note"><b>'+escapeHTML(r.subject)+'</b><p>स्कोर: '+r.score+'/'+r.total+' ('+Math.round(r.score/r.total*100)+'%)</p><small class="muted">'+escapeHTML(r.date)+'</small></div>').join(''):'<p class="muted">अभी कोई टेस्ट नहीं दिया गया। क्विज़ पूरा करने के बाद स्कोर यहाँ दिखेगा।</p>';}
+function clearResults(){if(confirm('क्या सारे सेव रिजल्ट हटाने हैं?')){localStorage.removeItem('zynoResults');renderResults();}}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function addBubble(text,who){const b=document.createElement('div');b.className='bubble '+who;b.textContent=text;$('chatlog').appendChild(b);$('chatlog').scrollTop=$('chatlog').scrollHeight;}
+function sendAI(){const input=$('aiInput'),q=input.value.trim();if(!q)return;addBubble(q,'user');input.value='';const t=q.toLowerCase();let answer='मैं अभी डेमो मोड में हूँ, इसलिए हर सवाल का असली AI जवाब नहीं दे सकता। अभी तुम सवाल को छोटे भागों में बाँटो, किताब का अध्याय बताओ, या बाद में सुरक्षित AI सर्वर कनेक्शन जोड़ो।';if(t.includes('प्रकाश संश्लेषण')||t.includes('photosynthesis'))answer='प्रकाश संश्लेषण वह प्रक्रिया है जिसमें हरे पौधे सूर्य के प्रकाश, पानी और कार्बन डाइऑक्साइड की मदद से भोजन बनाते हैं। इस प्रक्रिया में ऑक्सीजन भी निकलती है।';else if(t.includes('प्रतिशत')||t.includes('percentage'))answer='प्रतिशत का सूत्र: (भाग ÷ कुल) × 100। उदाहरण: 50 में से 40 अंक = (40 ÷ 50) × 100 = 80%।';else if(t.includes('नमस्ते')||t.includes('hello')||t.includes('हेलो'))answer='नमस्ते! 😊 मैं तुम्हारी पढ़ाई में मदद करने के लिए यहाँ हूँ। कोई विषय या सवाल लिखो।';else if(t.includes('पढ़ाई')||t.includes('study'))answer='पढ़ाई टिप: 25 मिनट ध्यान से पढ़ो, फिर 5 मिनट का ब्रेक लो। हर अध्याय के बाद 5 सवाल खुद हल करो और गलत जवाब दोबारा पढ़ो।';setTimeout(()=>addBubble(answer,'bot'),150);}
+function clearChat(){$('chatlog').innerHTML='';addBubble('चैट साफ़ हो गई। अपना अगला सवाल लिखो!','bot');}
+startQuiz();
+</script>
+</body>
+</html>
